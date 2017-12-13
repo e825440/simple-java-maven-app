@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Compile Stage') { 
             steps {
-                sh 'mvn clean package' 
+                bat 'mvn clean package' 
             }
         }
         
         stage('Testing Stage') { 
             steps {
-                sh 'mvn test' 
+                bat 'mvn test' 
             }
         }
         
         stage('Install Stage') { 
             steps {                
-                sh 'mvn install' 
+                bat 'mvn install' 
             }
         }
     }
